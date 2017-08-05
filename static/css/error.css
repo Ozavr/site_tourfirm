@@ -1,0 +1,41 @@
+body {
+	background: #2196f3;
+}
+.error-up-row {
+	height: 64px;
+	margin-bottom: 24px;
+}
+.error-logo-container {
+	height: 64px;
+	padding-top: 11px;
+}
+.error-logo {
+	float: right;
+}
+.error-sorry {
+	font-family: Arial;
+	font-size: 24px;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 64px;
+}
+.error-link {
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 96px;
+	background: #f44336;
+	box-shadow: 0px 2px 4px 0px #000000;
+	min-height: 48px;
+	padding: 15px;
+}
+.error-link:hover {
+	box-shadow: 0px 4px 8px 0px #000000;
+}
+.error-link a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.error-image {
+	float: left;
+}

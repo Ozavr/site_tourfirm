@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+{% block additional_css %}<link rel="stylesheet" type="text/css" href="{% static 'css/pages/table.css' %}">{% endblock %}
+{% block content %}
+	<div class="table-h1">
+		{% placeholder 'h1' %}
+	</div>
+	<div class="table-container">
+		<div class="table-avatar">
+			{% placeholder 'avatar' %}
+		</div>
+		<div class="table-menu-row">
+			{% show_menu_below_id request.current_page.parent.reverse_id 0 0 100 100 'table_menu.html' %}
+		</div>
+		<!-- Старое выпадающее меню -->
+		<!--<div class="row table-menu-row">		
+			<div class="dropdown col-lg-6 col-md-6 col-sm-6 col-xs-12 table-menu-container">
+				<button type="button" class="btn btn-default dropdown-toggle table-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="{% static 'icons/down.png' %}"> 
+					<p>{% page_attribute 'menu_title' %}</p> 
+  				</button>
+					<ul class="dropdown-menu base-dropdown-menu">
+					    {% show_menu_below_id request.current_page.parent.reverse_id 0 0 100 100 'dropdown_menu.html' %}
+					 </ul>
+			</div>
+		</div>-->
+		<div class="table-content">
+			{% placeholder 'content' %}
+		</div>
+		<div class="table-social">
+			{% placeholder 'social' %}
+		</div>
+	</div>
+{% endblock %}

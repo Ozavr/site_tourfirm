@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+{% block additional_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/article.css' %}">
+	<!-- Tourtrans обязательная часть -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.tourtrans.ru/css/export.css"/>
+	<!-- Tourtrans поиск туров -->
+	<link rel="stylesheet" type="text/css" href="http://www.tourtrans.ru/js/agencies/ui/css/cupertino/jquery-ui-1.7.1.custom.css" />
+	<script type="text/javascript" src="http://www.tourtrans.ru/js/agencies/ui/js/jquery-ui-1.7.1.custom.min.js"></script>
+	<script type="text/javascript" src="http://www.tourtrans.ru/js/agencies/ui/js/i18n/ui.datepicker-ru.js"></script>
+	<script type="text/javascript" src="http://www.tourtrans.ru/js/agencies/search.js"></script>
+	<!-- Tourtrans страница выгрузки -->
+	<link rel="stylesheet" type="text/css" href="http://www.tourtrans.ru/css/listview/styles.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.tourtrans.ru/js/fancy/jquery.fancybox-1.3.1.css" />
+	<script type="text/javascript" src="http://www.tourtrans.ru/js/agencies/body2.js"></script>
+	<script type="text/javascript" src="http://www.tourtrans.ru/js/fancy/jquery.fancybox-1.3.1.pack.js"></script>
+	<script type="text/javascript" src="http://www.tourtrans.ru/js/fancy/jquery.mousewheel-3.0.2.pack.js"></script>
+{% endblock %}
+{% block content %}
+	<div class="article-container">
+		<div class="article-avatar">
+			{% placeholder 'avatar' %}
+		</div>
+		<div class="article-h1">
+				{% placeholder 'h1' %}
+		</div>
+		<div class="article-content">
+			{% placeholder 'content' %}
+		</div>
+		<div class="article-social">
+			{% placeholder 'social' %}
+		</div>
+	</div>
+{% endblock content %}
+{% block additional_js %}
+
+{% endblock %}

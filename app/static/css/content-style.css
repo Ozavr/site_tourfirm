@@ -1,0 +1,11 @@
+style-text {
+	color: #000000;
+	font-size: 14px;
+}
+style-block {
+	background: #ffffff !important;
+	min-height: 64px;
+	box-shadow: 0px 2px, 4px, 0px #000000;
+	color: #000000;
+	font-size: 14px;
+}

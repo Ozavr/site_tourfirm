@@ -1,0 +1,56 @@
+{% load cms_tags staticfiles %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Такой страницы не существует">
+    
+    <title>Такой страницы не существует</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/error.css' %}">
+    
+    {# render_block 'css' #}
+
+</head>
+<body>
+    <div class="container">
+        <div class="row error-up-row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 error-logo-container">
+                <a href="/">
+                    <img src="{% static 'img/Logo.png' %}" class="error-logo">
+                </a>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <p class='error-sorry'>Извините, введенный адрес или ссылка некорректна...</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 error-link">
+                        <a href="/">Перейти на главную страницу</a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 error-logo">
+                <img src="{% static 'icons/error.png' %}" class='error-image'>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {# render_block "js" #}
+</body>
+</html>

@@ -1,0 +1,119 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% page_attribute 'meta_description' %}">
+    <meta name="keywords" content="{% page_attribute 'meta_description' %}">
+    
+    
+    <title>{% page_attribute 'page_title' %} Тагилтурист</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/content-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pages/table.css' %}">
+    {% block additional_css %}{% endblock %}
+
+    {% render_block 'css' %}
+
+</head>
+  
+<body>
+    {% cms_toolbar %}
+
+    <!-- There will be menu -->
+    <nav class="navbar navbar-default navbar-fixed-top base-header" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle base-menu-mobile-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class='glyphicon glyphicon-align-justify base-menu-mobile-icon'></span>
+                </button>
+                <a class="navbar-brand base-logo" href="/">
+                    <img src="{% static 'img/Logo.png' %}">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse base-menu" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% show_menu 0 1 100 100 'menu.html' %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid base-slider">
+        {% placeholder 'slider' %}    
+    </div>
+    
+    <div class="container base-body">
+        <div class="table-h1">
+            {% placeholder 'h1' %}
+        </div>
+        <div class="table-container">
+        <div class="table-avatar">
+            {% placeholder 'avatar' %}
+        </div>
+        <div class="table-menu-row">
+            {% show_menu_below_id request.current_page.parent.reverse_id 0 0 100 100 'table_menu.html' %}
+        </div>
+        <!-- Старое выпадающее меню -->
+        <!--<div class="row table-menu-row">        
+            <div class="dropdown col-lg-4 col-md-4 col-sm-4 col-xs-12 table-menu-container">
+                <button type="button" class="btn btn-default dropdown-toggle table-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="{% static 'icons/down.png' %}"> 
+                    <p>{% page_attribute 'menu_title' %}</p> 
+                </button>
+                    <ul class="dropdown-menu base-dropdown-menu">
+                        {% show_menu_below_id request.current_page.parent.reverse_id 0 0 100 100 'dropdown_menu.html' %}
+                     </ul>
+            </div>
+        </div>-->
+        <div class="basefull-content">
+            {% placeholder 'content' %}
+        </div>
+        <div class="table-social">
+            {% placeholder 'social' %}
+        </div>
+        </div>
+    </div>
+
+
+    <footer class="base-footer">
+        <div class="container">
+            <div class="row base-footer-info">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 base-footer-block">
+                    {% static_placeholder 'footer-info' %}
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 base-footer-block">
+                    {% static_placeholder 'footer-phone' %}
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 base-footer-block">
+                    {% static_placeholder 'footer-mobile' %}
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 base-footer-block base-footer-social">
+                    {% static_placeholder 'footer-social' %}
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-hidden base-footer-block">
+                    <div class="base-design-block">
+                        <a class="base-design" href="https://vk.com/ozavr">Design by Max <span class="ozavr">Ozavr</span></a>
+                    </div>  
+                    {% static_placeholder 'footer-counter' %}
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% render_block "js" %}
+</body>
+
+</html>

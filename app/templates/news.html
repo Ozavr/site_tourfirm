@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+
+<!-- Adding verification tags for robots -->
+{% block additional_meta %}
+	<meta name="yandex-verification" content="645f2040145538b6" />
+	<meta name="google-site-verification" content="voRa-MHERHXQg0x3aL9Wpwpu33NS1JKDrMkm-mclsZ0" />
+{% endblock %}
+
+{% block additional_css %}<link rel="stylesheet" type="text/css" href="{% static 'css/pages/news.css' %}">{% endblock %}
+{% block content %}
+	
+{% endblock %}

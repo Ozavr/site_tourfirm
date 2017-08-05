@@ -1,0 +1,134 @@
+.table-h1 {
+	padding: 16px;
+	min-height: 50px;
+	background: #ffffff;
+	box-shadow: 0px 2px 4px 0px #000000;
+	margin-bottom: 24px;
+	font-family: Arial;
+	font-size: 14px;
+	color: #000000;
+}
+.table-h1 h1 {
+	font-size: 24px !important;
+	font-weight: bold;
+	margin: 0px;
+}
+.table-h1 p {
+	margin-top: 8px;
+}
+.table-container {
+	min-height: 128px;
+	background: #ffffff;
+	box-shadow: 0px 2px 4px 0px #000000;
+	font-family: Arial;
+	font-size: 14px;
+	color: #000000;
+	margin-bottom: 16px;
+}
+
+.table-menu-row {
+	padding: 16px 0px 8px;
+	margin: 0px 16px;
+	font-size: 16px;
+}
+.table-menu-element {
+	display: inline-block;
+	margin-right: 16px;
+	margin-bottom: 16px;
+}
+.table-menu-element-link {
+	color: #2196f3;
+}
+.table-menu-element-link:hover {
+	color: #f44336;
+	text-decoration: none;
+}
+.table-menu-noselected {
+	display: none;
+}
+.table-menu-selected {
+	height: 2px;
+	background: #2196f3;
+
+}
+/* Старое выпадающее меню
+.table-menu-container {
+	padding: 0px;
+}
+.table-menu-button {
+	min-height: 50px !important;
+	background: #2196f3 !important;
+	box-shadow: 0px 1px 2px 0px #000000;
+	color: #ffffff;
+	font-size: 16px !important;
+	border: 0px;
+	border-radius: 0px;
+	min-width: 256px;
+}
+.table-menu-button:hover {
+	color: #f44336;
+}
+.table-menu-button:focus {
+	background: #f44336 !important;
+	color: #ffffff !important; 
+}
+.table-menu-button img {
+	display: block;
+	float: left;
+}
+.table-menu-button p {
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+*/
+
+.table-content {
+	margin: 8px 0px;
+}
+.table-content .row {
+	border-bottom: 2px solid #0d47a1;
+	margin: 0px 16px;
+}
+.table-content p {
+	margin: 15px 0px;
+}
+.table-content .btn {
+	background: #2196f3;
+	color: #ffffff;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow: 0px 1px 2px 0px #000000;
+	margin: 8px 0px;
+}
+.table-content .btn:hover {
+	color: #f44336;
+	background: #2196f3;
+}
+.table-content .btn:focus {
+	background: #f44336 !important;
+	color: #ffffff !important;
+}
+.table-content ul {
+	background: #ffffff;
+	color: #000000;
+	box-shadow: 0px 1px 2px 0px #000000;
+}
+.table-content li a:hover {
+	background: #ffffff;
+	color: #f44336;
+}
+
+.table-content .carousel {
+	margin: 0px 16px;
+}
+.table-content .carousel-control:hover {
+	color: #f44336; 
+}
+.table-social {
+	padding: 16px;
+}
+.table-social a {
+	margin-left: 0px !important;
+	margin-right: 8px !important;
+}

@@ -1,0 +1,511 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="В нашем фирменном туре в Санкт-Петербург по программе «Все включено» предусмотрено всё для Вашего комфортного путешествия.">
+    <meta name="keywords" content="Санкт-Петербург, туры в Санкт-Петербург, Санкт-Петербурги из Нижнего Тагила, туры в Санкт-Петербург из Нижнего Тагила, Санкт-Петербург Нижний Тагил, Нижний Тагил Санкт-Петербург поезд, билеты Нижний Тагил Санкт-Петербург">
+    
+    
+    <title>Тур Санкт-Петербург из Нижнего Тагила Все включено</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/content-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing_spb.css' %}">
+
+    {% render_block 'css' %}
+
+</head>
+<body>
+    {% cms_toolbar %}
+
+    {% block 'scripts' %}{% endblock %}
+    
+    <!--Блок main-->
+    <div class="conteiner-fluid main">
+        <div class="container main-row-logo">
+            <a href="http://tagilturist.ru/ru/">
+                <img src="{% static 'image/logo.svg' %}" class="main-logo" alt="Тагилтурист">
+            </a>
+        </div>
+        <div class="container main-content-space">
+            <div>
+                <h1 class="h1-center main-h1">Санкт-Петербург из Нижнего Тагила <br> тур "Все включено"</h1>
+                <p class="p-center-white">Петербург уже давно описан, а что не описано, то надо видеть самому. <br>Увидеть Санкт-Петербург - это просто!</p>
+                <a href="#request">
+                    <div class="main-button">
+                        <p class="label-center">ЗАКАЗАТЬ ЗВОНОК</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--Блок Преимущества-->
+    <div class="container advantage">
+        <h2 class="h2-center">Наши преимущества</h2>
+        <p class="p-center">На протяжении многих лет мы даем Вам возможность познакомиться с этим удивительным городом. <br>
+        В нашем фирменном туре в Санкт-Петербург по программе «Все включено» предусмотрено всё для Вашего комфортного путешествия. </p>
+        <div class="row advantage-row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 advantage-block">
+                <a href="#transport">
+                    <img src="{% static 'icons/transport.svg' %}" class="advantage-icon" alt="Транспорт в Санкт-Петербург">
+                    <p class="label-center">ТРАНСПОРТ</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 advantage-block">
+                <a href="#live">
+                    <img src="{% static 'icons/live.svg' %}" class="advantage-icon" alt="Проживание и питание в Санкт-Петербурге">
+                    <p class="label-center">ПРОЖИВАНИЕ И ПИТАНИЕ</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 advantage-block">
+                <a href="#excours">
+                    <img src="{% static 'icons/excours.svg' %}" class="advantage-icon" alt="Экскурсии в Санкт-Петербурге">
+                    <p class="label-center">ЭКСКУРСИИ</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--Блок Транспорт-->
+    <div class="container transport" id="transport">
+        <div class="row"> 
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="transport-photo"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div>
+                    <h3 class="h3-left">Транспорт</h3>
+                    <p class="p-left">Для Вашего удобства мы позаботились о доставке Вас в Санкт-Петербург и обратно, к достопримечательностям этого славного города. В стоимость тура входит: трансферы,  железнодорожный проезд, транспортное обслуживание на комфортабельном автобусе на  протяжении всего тура.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Блок Проживание и питание-->
+    <div class="container live" id="live">
+        <div class="row"> 
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div>
+                    <h3 class="h3-left">Проживание и Питание</h3>
+                    <p class="p-left">Чтобы Ваше проживание в Санкт-Петербурге было комфортным, мы включили в тур проживание в "А отель Фонтанка" и 2х разовое питание.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="live-photo"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Блок экскурсии-->
+    <div class="container excours" id="excours">
+        <h3 class="h3-left">Что Вы увидете</h3>
+        <p class="p-left">Чтобы Вам в Санкт-Петербурге было не скучно и интересно, в программу тура включено большое количество увлекательных экскурсий.</p>
+        
+        <div class="row">
+
+            <!--1-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-lavre">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Троицкий собор Александро-Невской лавры</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Троицкий собор Александро-Невской лавры</p>
+            </div>
+
+            <!--2-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-krepost">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Петропавловская крепость</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Петропавловская крепость</p>
+            </div>
+
+            <!--3-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-kazan">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Казанский собор</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Казанский собор</p>
+            </div>
+
+            <!--4-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-nevsky">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Невский проспект</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Невский проспект</p>
+            </div>
+
+            <!--5-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-ermitage">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Эрмитаж</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Эрмитаж</p>
+            </div>
+
+            <!--6-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-choco">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Музей и магазин Шоколада</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Музей и магазин Шоколада</p>
+            </div>
+
+            <!--7-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-bridge">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Развод мостов</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Развод мостов</p>
+            </div>
+
+            <!--8-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-petergoph">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Петергоф</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Петергоф</p>
+            </div>
+
+            <!--9-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-soborpavla">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Собор Петра и Павла</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Собор Петра и Павла</p>
+            </div>
+
+            <!--10-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-gatchina">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Гатчина</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Гатчина</p>
+            </div>
+
+            <!--11-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-isak">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Исаакиевский собор</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Исаакиевский собор</p>
+            </div>
+
+            <!--12-->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 excours-block">
+                <div class="excours-image excours-ksen">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Часовня Ксении Блаженной</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Часовня Ксении Блаженной</p>
+            </div>
+
+        </div>
+
+        <h3 class="h3-left">Что Вы можете увидеть ещё</h3>
+        <p class="p-left">У Вас будет возможность заказать дополнительные экскурсии <br> 
+        или посетить интереснейшие места Санкт-Петербурга.</p>
+
+        <div class="row">
+
+            <!--13-->
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 excours-block">
+                <div class="excours-another-image excours-maket">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Гранд Макет Россия</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Гранд Макет Россия</p>
+            </div>
+
+            <!--14-->
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 excours-block">
+                <div class="excours-another-image excours-kron">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Кронштадт</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Кронштадт</p>
+            </div>
+
+            <!--15-->
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 excours-block">
+                <div class="excours-another-image excours-rivier">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Прогулка по рекам и каналам</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Прогулка по рекам и каналам</p>
+            </div>
+
+            <!--16-->
+            <div class="hidden-xs col-sm-4 hidden-md hidden-lg"></div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 excours-block">
+                <div class="excours-another-image excours-akvator">
+                    <div class="hidden-xs excours-overlay">
+                        <p class="label-left-white">Петровская акватория</p>
+                    </div>
+                </div>
+                <p class="visible-xs label-center excours-label-xs">Петровская акватория</p>
+            </div>
+            <div class="hidden-xs col-sm-4 hidden-md hidden-lg"></div>
+
+        </div>
+
+    </div>
+
+    <!--Блок Стоимость-->
+    <div class="container coast">
+        <h2 class="h2-center">Стоимость</h2>
+        <p class="p-center">Чтобы узнать стоимость Вашего путешествия, достаточно просто выбрать интересующий вариант из таблицы ниже и сложить с вариантом из таблицы «Ж/Д проезд».</p>
+        <table class="table coast-table p-left">
+            <thead>
+                <th class="label-left">Заезды</th>
+                <th class="label-left">Дней в Санкт-Петербурге</th>
+                <th class="label-left">2, 3х местные номера</th>
+                <th class="label-left">1 местный номер</th>
+                <th class="label-left">Школьники</th>
+            </thead>
+            <tr>
+                <td>17.06. - 25.06.</td>
+                <td>5</td>
+                <td>17 300 рублей/чел.</td>
+                <td>22 900 рублей/чел.</td>
+                <td>16 170 рублей/чел.</td>
+            </tr>
+            <tr>
+                <td>15.07. - 23.07.</td>
+                <td>5</td>
+                <td>17 300 рублей/чел.</td>
+                <td>22 900 рублей/чел.</td>
+                <td>16 170 рублей/чел.</td>
+            </tr>
+            <tr>
+                <td>27.07. - 05.08. Праздник ВМФ</td>
+                <td>6</td>
+                <td>18 580 рублей/чел.</td>
+                <td>25 580 рублей/чел.</td>
+                <td>17 430 рублей/чел.</td>
+            </tr>
+            <tr>
+                <td>11.08. - 19.08.</td>
+                <td>5</td>
+                <td>17 300 рублей/чел.</td>
+                <td>22 900 рублей/чел.</td>
+                <td>16 170 рублей/чел.</td>
+            </tr>
+        </table>
+
+        <img src="{% static 'icons/plus.svg' %}" class="coast-icon">
+        <h2 class="h2-center">Ж/Д проезд (в обе стороны)</h2>
+        <table class="table coast-table p-left">
+            <thead>
+                <th class="label-left"></th>
+                <th class="label-left">Взрослый</th>
+                <th class="label-left">Дети 10-17 лет</th>
+                <th class="label-left">Дети 5-9 лет</th>
+            </thead>
+            <tr>
+                <td class="label-left">Плацкарт</td>
+                <td>7 746 рублей/чел.</td>
+                <td>4 171 рублей/чел.</td>
+                <td>3 099 рублей/чел.</td>
+            </tr>
+            <tr>
+                <td class="label-left">Купе</td>
+                <td>14 182 рублей/чел.</td>
+                <td>14 182 рублей/чел.</td>
+                <td>5 367 рублей/чел.</td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Блок программа-->
+    <div class="container-fluid programm">
+        <div class="container">
+            <h2 class="h2-center-white">Программа тура</h2>
+            <p class="p-center-white">Ознакомтесь с более подробной программой Санкт-Петербург тур «Все включено» из Нижнего Тагила.</p>
+            <a href="{% static 'files/spb_programm.pdf' %}" target="_blank">
+                <div class="programm-button">
+                    <p class="label-center">СКАЧАТЬ ПРОГРАММУ</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Блок контакты-->
+    <div class="container contacts">
+        <h2 class="h2-center">Контакты</h2>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-block">
+                        <h3 class="h3-left">Телефоны:</h3>
+                        <p class="p-left">
+                        +7 (3435) 25-39-22(ф)<br> 
+                        +7 (3435) 41-75-05 <br> 
+                        +7 (3435) 41-85-07 <br> 
+                        +7-912-299-3222 <br>
+                        +7-905-802-1113</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-block">
+                        <h3 class="h3-left">E-mail:</h3>
+                        <p class="p-left">
+                            <a href="mailto:tagilturist@tagnet.ru">tagilturist@tagnet.ru</a> <br> 
+                            <a href="mailto:ntagilturist@tagnet.ru">ntagilturist@tagnet.ru</a> <br> 
+                            <a href="mailto:ltagilturist@tagnet.ru">ltagilturist@tagnet.ru</a><br> 
+                            <a href="mailto:tagilturist.k@yandex.ru">tagilturist.k@yandex.ru <br>(ж/д кассы)</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-block">
+                        <h3 class="h3-left">Адрес:</h3>
+                        <p class="p-left">
+                            г. Нижний Тагил, ул. Садовая, 10 (ост. Ж/Д Вокзал)
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-block">
+                        <h3 class="h3-left">ICQ:</h3>
+                        <p class="p-left">
+                            438-155-952 (Мария) <br>
+                            697-770-417 (Надежда)
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-block">
+                        <h3 class="h3-left">Время работы:</h3>
+                        <p class="p-left">
+                            Пн-Пт 09:00-18:00 <br>
+                            Сб. 10:00-16:00
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contacts-block">
+                        <h3 class="h3-left">Электронные ресурсы:</h3>
+                        <p class="p-left">
+                            Сайт: <a href="http://tagilturist.ru" target="_blank">tagilturist.ru</a> <br>
+                            ВК: <a href="https://vk.com/tagilturist" target="_blank">vk.com/tagilturist</a> <br>
+                            ОК: <a href="https://ok.ru/tagilturist" target="_blank">ok.ru/tagilturist</a>
+                        </p>
+                    </div>                
+                </div>
+                   
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab8bc3fa309f48c6b13b8036d31d1e03ba4636c5567fad576a3e953d8cb590d1d&amp;width=100%25&amp;height=540&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+
+    <!--Блок заказать звонок-->
+    <div class="container-fluid request" id="request" >
+        <div class="container">
+            {% block 'request' %}
+                <div class="row">
+                    <div class="hidden-xs col-sm-2 col-md-2 col-lg-2"></div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <h2 class="h2-center-white">Заказать звонок</h2>
+                        <p class="p-center-white">
+                            Для более подробной информации - заполните эту простую форму, и наш менеджер свяжется с вами в ближайшее время.
+                        </p>
+                        
+                        <form class="form-horizontal request-form" method="post">
+                            {% csrf_token %}
+                            {% for field in form.visible_fields %}
+                                {% if forloop.counter = 1 %}
+                                    <div class="form-group request-form-row">
+                                        <label for="name" class="col-md-3 control-label label-right-white">Ваше имя:</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" id="name" name="name" placeholder="Анна" value="{{ current_name }}">
+                                            {% if field.errors|length > 0 %}
+                                                <div class="error-list">
+                                                    {% for error in field.errors %}
+                                                        <div class="error-description">{{ error }}</div>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if forloop.counter = 2 %}
+                                    <div class="form-group request-form-row">
+                                        <label for="phone" class="col-md-3 control-label label-right-white">Тел. номер:</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" id="phone" name="phone" placeholder="+7 (999) 999-99-99" value="{{ current_name }}">
+                                            {% if field.errors|length > 0 %}
+                                                <div class="error-list">
+                                                    {% for error in field.errors %}
+                                                        <div class="error-description">{{ error }}</div>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if forloop.counter = 3 %}
+                                    <div class="form-group request-form-row">
+                                        <label for="email" class="col-md-3 control-label label-right-white">E-mail:</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" id="email" name="email" placeholder="sample@mail.ru" value="{{ current_name }}">
+                                            {% if field.errors|length > 0 %}
+                                                <div class="error-list">
+                                                    {% for error in field.errors %}
+                                                        <div class="error-description">{{ error }}</div>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                          <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                              <input type="submit" class="request-button label-center" value="ЗАКАЗАТЬ ЗВОНОК">
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                    <div class="hidden-xs col-sm-2 col-md-2 col-lg-2"></div>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+
+    <!--Блок скрипты-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% render_block "js" %} 
+</body>
+
+</html>

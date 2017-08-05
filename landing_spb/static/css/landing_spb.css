@@ -1,0 +1,622 @@
+/* Подгружаем шрифты */
+
+@font-face {
+	font-family: Gabriela-Regular;
+    src: url(../fonts/Gabriela-Regular.ttf);
+}
+
+@font-face {
+	font-family: HelveticaBold;
+    src: url(../fonts/HelveticaBold.ttf);
+}
+
+@font-face {
+	font-family: HelveticaRegular;
+    src: url(../fonts/HelveticaRegular.ttf);
+}
+
+/* Стили написания */
+
+.h1-center {
+	font-family: Gabriela-Regular;
+	font-size: 36px;
+	text-align: center;
+	color: #ffffff;
+	line-height: 54px;
+}
+
+.h1-left {
+	font-family: Gabriela-Regular;
+	font-size: 36px;
+	color: #FFFFFF;
+	line-height: 54px;
+	text-align: left;
+}
+
+.h2-left {
+	font-family: Gabriela-Regular;
+	font-size: 32px;
+	color: #000000;
+	line-height: 48px;
+	text-align: left;
+}
+
+.h2-left-white {	
+	font-family: Gabriela-Regular;
+	font-size: 32px;
+	color: #FFFFFF;
+	line-height: 48px;
+	text-align: left;
+}
+
+.h2-center {
+	font-family: Gabriela-Regular;
+	font-size: 32px;
+	color: #000000;
+	line-height: 48px;
+	text-align: center;
+}
+
+.h2-center-white {
+	font-family: Gabriela-Regular;
+	font-size: 32px;
+	color: #FFFFFF;
+	line-height: 48px;
+	text-align: center;
+}
+
+.h3-left {
+	font-family: Gabriela-Regular;
+	font-size: 24px;
+	color: #000000;
+	line-height: 36px;
+	text-align: left;
+}
+
+.label-left {
+	font-family: HelveticaBold;
+	font-size: 18px;
+	color: #000000;
+	line-height: 27px;
+	text-align: left;
+}
+
+.label-left-white {
+	font-family: HelveticaBold;
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 27px;
+	text-align: left;
+}
+
+.label-center {
+	font-family: HelveticaBold;
+	font-size: 18px;
+	color: #000000;
+	line-height: 27px;
+	text-align: center;
+}
+
+.label-center-white {
+	font-family: HelveticaBold;
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 27px;
+	text-align: center;
+}
+
+.label-right-white {
+	font-family: HelveticaBold;
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 27px;
+	text-align: right;
+}
+
+.p-left {
+	font-family: HelveticaRegular;
+	font-size: 18px;
+	color: #000000;
+	line-height: 27px;
+	text-align: left;
+}
+
+.p-left-white {
+	font-family: HelveticaRegular;
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 27px;
+	text-align: left;
+}
+
+.p-center {
+	font-family: HelveticaRegular;
+	font-size: 18px;
+	color: #000000;
+	line-height: 27px;
+	text-align: center;
+}
+
+.p-center-white {
+	font-family: HelveticaRegular;
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 27px;
+	text-align: center;
+}
+
+.a-link {
+	font-family: Helvetica;
+	font-size: 18px;
+	color: #A69713;
+	line-height: 27px;
+	text-align: left;
+}
+
+/* Блок main */
+
+.main {
+	background: url(../image/main.jpg) no-repeat center;
+	min-height: 480px; 
+}
+
+.main-row-logo {
+	height: 42px;
+}
+
+.main-logo {
+	width: 147px;
+	height: 36px;
+	margin-top: 6px;
+}
+
+.main-content-space {
+	min-height: 438px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+.main-content h1 {
+	margin-bottom: 18px;
+}
+
+.main-button {
+	background: #FFEB3B;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.72);
+	border-radius: 18px;
+	width: 240px;
+	height: 36px;
+	position: relative;
+	margin: 30px auto 0px auto;
+	padding-top: 7px;
+}
+
+.main-button:hover {
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.72);
+}
+.main a:hover {
+	text-decoration: none;
+}
+.main-butoon:active {
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.72);
+}
+
+/* Блок advantage */
+
+.advantage h2 {
+	margin-top: 72px;
+}
+.advantage p {
+	margin-top: 18px;
+	margin-bottom: 0px;
+}
+
+.advantage-row {
+	margin-top: 36px;
+	margin-bottom: 48px;
+}
+
+.advantage-row p {
+	margin-top: 12px;
+	
+}
+
+.advantage-block {
+	margin-bottom: 24px;
+}
+
+.advantage-icon {
+	display: block;
+	width: 144px;
+	height: 144px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.advantage-icon:hover {
+	width: 158px;
+	height: 158px;
+}
+
+.advantage-block:hover {
+	margin-bottom: 0px;
+}
+
+.advantage-row a:hover {
+	text-decoration: none;
+}
+
+.advantage-row a:active {
+	text-decoration: none;
+	color: #A69713;
+}
+
+/* Блок Transport */
+
+.transport-photo {
+	background: url(../image/transport.png) no-repeat center;
+	min-height: 360px; 
+}
+
+.transport h3 {
+	margin-top: 24px;
+	margin-bottom: 18px;
+}
+
+.transport p {
+	margin-bottom: 24px;
+}
+
+/* Блок live */
+
+.live-photo {
+	background: url(../image/live.png) no-repeat center;
+	min-height: 360px; 
+}
+
+.live h3 {
+	margin-top: 24px;
+	margin-bottom: 18px;
+}
+
+.live p {
+	margin-bottom: 24px;
+}
+
+/* Блок excours */
+
+.excours {
+	margin-top: 36px; 
+}
+
+.excours h3 {
+	margin: 0px 0px 18px 0px;
+}
+
+.excours p {
+	margin-bottom: 30px;
+}
+
+.excours-block {
+	margin-bottom: 30px;
+}
+
+.excours-image {
+	min-height: 240px;
+	padding-top: 168px;
+}
+
+.excours-overlay {
+	background: rgba(126,87,194,0.72);
+	height: 72px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.excours-overlay p {
+	margin: 0px 6px;
+}
+
+.excours-label-xs {
+	margin-top: 12px;
+	margin-bottom: 0px !important;
+}
+/* Изображения для excours */
+.excours-lavre {
+	background: url(../image/excoursions/lavre.png) no-repeat center;
+}
+.excours-krepost {
+	background: url(../image/excoursions/krepost.png) no-repeat center;
+}
+.excours-kazan {
+	background: url(../image/excoursions/kazan.png) no-repeat center;
+}
+.excours-nevsky {
+	background: url(../image/excoursions/nevsky.png) no-repeat center;
+}
+.excours-ermitage {
+	background: url(../image/excoursions/ermitage.png) no-repeat center;
+}
+.excours-choco {
+	background: url(../image/excoursions/choco.png) no-repeat center;
+}
+.excours-bridge {
+	background: url(../image/excoursions/bridge.png) no-repeat center;
+}
+.excours-petergoph {
+	background: url(../image/excoursions/petergoph.png) no-repeat center;
+}
+.excours-soborpavla {
+	background: url(../image/excoursions/soborpavla.png) no-repeat center;
+}
+.excours-gatchina {
+	background: url(../image/excoursions/gatchina.png) no-repeat center;
+}
+.excours-isak {
+	background: url(../image/excoursions/isak.png) no-repeat center;
+}
+.excours-ksen {
+	background: url(../image/excoursions/ksen.png) no-repeat center;
+}
+
+.excours-another-image {
+	min-height: 174px;
+	padding-top: 102px;
+}
+
+.excours-maket {
+	background: url(../image/excoursions/maket.png) no-repeat center;
+}
+.excours-kron {
+	background: url(../image/excoursions/kron.png) no-repeat center;
+}
+.excours-rivier {
+	background: url(../image/excoursions/rivier.png) no-repeat center;
+}
+.excours-akvator {
+	background: url(../image/excoursions/akvator.png) no-repeat center;
+}
+
+/* Блок coast */
+
+.coast {
+	margin-top: 32px;
+}
+
+.coast h2 {
+	margin: 0px 0px 18px 0px;
+}
+
+.coast p {
+	margin-bottom: 36px;
+}
+
+.coast-table {
+	margin: 0px;
+}
+
+.coast-table thead {
+	border-bottom: 2px solid #979797;
+}
+
+.coast-table thead th {
+	font-weight: normal;
+	padding: 12px;
+	vertical-align: top !important;
+}
+
+.coast-table tr {
+	border-bottom: 1px solid #979797;
+}
+
+.coast-table tr:last-child {
+	border-bottom: 0px solid #979797;
+}
+
+.coast-table tr td {
+	padding: 12px;
+	vertical-align: top;
+}
+
+.coast-icon {
+	display: block;
+	width: 72px;
+	height: 72px;
+	margin: 24px auto;
+}
+
+/* Блок programm */
+
+.programm {
+	background: #7E57C2;
+	min-height: 240px;
+	margin-top: 72px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+.programm h2 {
+	margin: 0px 0px 18px 0px;
+}
+
+.programm p {
+	margin: 0px 0px 18px 0px;
+}
+
+.programm-button {
+	background: #FFEB3B;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.72);
+	border-radius: 18px;
+	width: 240px;
+	height: 36px;
+	position: relative;
+	margin: 0px auto;
+	padding-top: 7px;
+}
+
+.programm-button:hover {
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.72);
+}
+.programm a:hover {
+	text-decoration: none;
+}
+.programm-butoon:active {
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.72);
+}
+
+/* Блок contacts */
+.contacts {
+	margin-top: 72px; 
+}
+
+.contacts h2 {
+	margin: 0px 0px 30px 0px;
+}
+
+.contacts-block {
+	margin-bottom: 30px;
+}
+
+.contacts-block h3 {
+	margin: 0px 0px 18px 0px;
+}
+
+.contacts-block p {
+	margin: 0px;
+}
+
+.contacts-block a {
+	color: #A69713;
+}
+
+/* Блок request */
+
+.request {
+	background: url(../image/footer.jpg) no-repeat center;
+	min-height: 480px; 
+	margin-top: 72px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+.request h2 {
+	margin: 0px 0px 18px 0px;
+}
+
+.request p {
+	margin: 0px 0px 24px 0px;
+}
+
+.request-form label {
+	font-weight: normal;
+}
+
+.request-form input:not(.request-button) {
+	height: 36px;
+	border: 0px;
+	border-radius: 6px;
+	background: #FFFFFF;
+	box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.84);
+}
+
+.request-form-row {
+	margin-bottom: 18px;
+}
+
+.request-button {
+	background: #FFEB3B;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.72);
+	border: 0px;
+	border-radius: 18px;
+	width: 240px;
+	height: 36px;
+	position: relative;
+	margin: 0px;
+	padding-top: 7px;
+}
+
+.request-button:hover {
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.72);
+	text-decoration: none;
+}
+
+.request-button:active {
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.72);
+}
+
+.error-description {
+	color: #ffffff;
+}
+
+/* Блок success */
+
+.success-img {
+	width: 240px;
+	height: 240px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.success-button {
+	background: #FFEB3B;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.72);
+	border-radius: 18px;
+	width: 240px;
+	height: 36px;
+	margin: 0px;
+	padding-top: 7px;
+}
+
+.success-button:hover {
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.72);
+}
+
+.success-button:active {
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.72);
+}
+
+.success-block {
+	height: 270px;
+	display: flex;
+  	justify-content: center;
+  	flex-direction: column;
+
+}
+
+.success-block a:hover {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

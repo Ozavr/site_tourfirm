@@ -1,0 +1,16 @@
+{% load menu_tags %}
+
+{% for child in children %}
+	<li class="child{% if child.selected %} selected{% endif %}
+		{% if child.ancestor %} ancestor{% endif %}
+		{% if child.sibling %} sibling{% endif %}
+		{% if child.descendant %} descendant{% endif %}
+		{% if child.children %} dropdown{% endif %} table-menu-element">
+	
+		<a {% if child.children %} href="#" class="dropdown-toggle table-menu-element-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"{% else %} href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="table-menu-element-link"{% endif %}">{{ child.get_menu_title }}</a>
+		<div class='{% if child.selected %}table-menu-selected{% else %}table-menu-noselected{% endif %}'></div>
+		<ul class="dropdown-menu base-dropdown-menu">
+			{% show_menu from_level to_level extra_inactive extra_active 'dropdown_menu.html' "" "" child %}
+		</ul>
+	</li>	
+{% endfor %}

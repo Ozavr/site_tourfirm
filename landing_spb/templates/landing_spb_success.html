@@ -1,0 +1,30 @@
+{% extends 'landing_spb.html' %}
+{% load staticfiles %}
+
+{% block 'scripts' %}
+	<script type="text/javascript">
+            window.onload = function(){ 
+            var offsetY = document.getElementById('request').offsetTop;
+            window.scrollTo(0, offsetY);
+            }
+    </script>
+{% endblock %}
+
+{% block 'request' %}
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<img src="{% static 'icons/thanks.svg' %}" class="success-img">
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 success-block">
+			<div>
+				<h2 class="h2-left-white">Спасибо!</h2>
+				<p class="p-left-white">Скоро мы с вами свяжемся!</p>
+				<a href="{% url 'landing_spb' %}" id="backUp" onclick="backUp">
+	                <div class="success-button">
+	                    <p class="label-center">ВОСТАНОВИТЬ</p>
+	                </div>
+	            </a>
+            </div>
+		</div>
+	</div>
+{% endblock %}

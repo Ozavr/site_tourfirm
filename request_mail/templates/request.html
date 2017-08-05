@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+{% block additional_css %}<link rel="stylesheet" type="text/css" href="{% static 'request.css' %}">{% endblock %}
+{% block content %}
+	<div class="request-container">
+		<div class="request-h1">
+			{% static_placeholder 'request_h1' %}
+		</div>
+		<form class="request-form" action="" method="post">
+			{% csrf_token %}
+			{% for field in form.visible_fields %}
+                {% if forloop.counter = 1 %}
+					<div class="form-group">
+					    <label for="country">Страна (регион)*</label>
+					    <input class="form-control" id="country" name="country" placeholder="Греция" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+                {% if forloop.counter = 2 %}
+					<div class="form-group">
+					    <label for="data_sending">Предполагаемая дата начала поездки*</label>
+					    <input class="form-control" id="data_sending" name="data_sending" placeholder="01 июня" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+                {% if forloop.counter = 3 %}
+					<div class="form-group">
+					    <label for="days">Продолжительность поездки (кол-во дней)*</label>
+					    <input class="form-control" id="days" name="days" placeholder="14 дней" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+                {% if forloop.counter = 4 %}
+					<div class="form-group">
+					    <label for="people">Количество человек (и возраст детей)*</label>
+					    <input class="form-control" id="people" name="people" placeholder="2, ребенок 8 лет" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+                {% if forloop.counter = 5 %}
+					<div class="form-group">
+					    <label for="food">Тип питания (завтраки, обед и ужин, все включено и т.п.)*</label>
+					    <input class="form-control" id="food" name="food" placeholder="Все включено" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+                {% if forloop.counter = 6 %}
+					<div class="form-group">
+					    <label for="price">Предполагаемая цена тура*</label>
+					    <input class="form-control" id="price" name="price" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+				{% if forloop.counter = 7 %}
+					<div class="form-group">
+					    <label for="name">Ваше имя*</label>
+					    <input class="form-control" id="name" name="name" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+				{% if forloop.counter = 8 %}
+					<div class="form-group">
+					    <label for="phone">Номер телефона*</label>
+					    <input class="form-control" id="phone" name="phone" placeholder="+7" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-description">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+				{% if forloop.counter = 9 %}
+					<div class="form-group">
+					    <label for="email">Адрес электронной почты*</label>
+					    <input class="form-control" id="email" name="email" placeholder="sample@mail.ru" value="{{ current_name }}">
+					    {% if field.errors|length > 0 %}
+				        	<div class="error-list">
+				          		{% for error in field.errors %}
+				            		<div class="error-email">{{ error }}</div>
+				          		{% endfor %}
+				       	 	</div>
+				    	{% endif %}
+					</div>
+				{% endif %}
+				{% if forloop.counter = 10 %}
+					<label for="description">Комментарий</label>
+					<div class="form-group">
+					    <textarea class="form-control" rows="3" id="description" name="description" placeholder="Кратко опишите что вас интересует" value="{{ current_name }}"></textarea>
+					</div>
+				{% endif %}
+			{% endfor %}
+			<div class="request-h1">
+				{% static_placeholder 'help_h1' %}
+			</div>
+			<div class="form-group">
+      			<input type="submit" class="request-form-submit" value="Отправить">
+    		</div>			
+		</form>
+		<!--<form class="form-horizontal" action="" method="post">
+			{% csrf_token %}
+			{% for field in form.visible_fields %}
+				<div class="form-group">
+				    {% if field.errors|length > 0 %}
+				        <div class="error-list">
+				          {% for error in field.errors %}
+				            <div class="error-description">{{ error }}</div>
+				          {% endfor %}
+				        </div>
+				    {% endif %}
+				    <label for='input{{ forloop.counter }}' class="col-sm-2 control-label">{{ field.label }}</label>
+				    <div class="col-sm-10">
+				    	<div class="control">{{ field }}</div>
+				    </div>
+				    {% if field.help_text %}
+				       <div class="help">{{ field.help_text }}</div>
+				    {% endif %}
+			{% endfor %}
+			<div><input type="submit" value="Отправить"></div>
+		</form>-->
+	</div>
+{% endblock content %}
